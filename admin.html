@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Admin Panel | ShopEase</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="admin-container">
+
+<h1 class="admin-title">Product Management</h1>
+
+
+<div class="admin-card fade-in">
+
+<h2>Add Product</h2>
+
+<input id="name" placeholder="Product name">
+
+<input id="price" type="number" placeholder="Price">
+
+<input id="image" placeholder="Image URL">
+
+<select id="category">
+<option value="electronics">Electronics</option>
+<option value="fashion">Fashion</option>
+<option value="footwear">Footwear</option>
+<option value="accessories">Accessories</option>
+</select>
+
+<button onclick="addProduct()" class="admin-btn">
+Add Product
+</button>
+
+</div>
+
+
+<div class="admin-card fade-in delay">
+
+<h2>All Products</h2>
+
+<div id="admin-products"></div>
+
+</div>
+
+
+<a href="index.html">
+<button class="admin-btn back-btn">
+Back to Store
+</button>
+</a>
+
+</div>
+
+<script src="admin.js"></script>
+
+</body>
+</html>

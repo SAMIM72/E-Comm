@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>ShopEase</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+
+<h1 class="logo">ShopEase</h1>
+
+<input type="text" id="search" placeholder="Search..." onkeyup="applyFilters()">
+
+<select id="category-filter" onchange="applyFilters()">
+<option value="all">All Categories</option>
+<option value="electronics">Electronics</option>
+<option value="fashion">Fashion</option>
+<option value="footwear">Footwear</option>
+<option value="accessories">Accessories</option>
+</select>
+
+<div class="price-filter">
+
+<label>Price Range:</label>
+
+<input type="number" id="min-price" placeholder="Min" oninput="applyFilters()">
+
+<input type="number" id="max-price" placeholder="Max" oninput="applyFilters()">
+
+<input type="range"
+id="price-range"
+min="0"
+max="100000"
+step="500"
+value="100000"
+oninput="updateRangeValue(this.value)">
+
+<span id="range-value">₹100000</span>
+
+</div>
+
+<button onclick="toggleDarkMode()">🌙</button>
+
+<button onclick="toggleWishlist()">❤️ <span id="wishlist-count">0</span></button>
+
+<button onclick="toggleCart()">🛒 <span id="cart-count">0</span></button>
+
+<a href="checkout.html"><button>Checkout</button></a>
+
+<a href="admin.html"><button>Admin</button></a>
+
+</header>
+
+
+<div class="products" id="product-list"></div>
+
+
+<!-- CART -->
+<div class="cart" id="cart">
+
+<div class="panel-header">
+<h2>Cart</h2>
+<button onclick="toggleCart()" class="close-btn">✖</button>
+</div>
+
+<div id="cart-items"></div>
+
+<h3>Total ₹<span id="cart-total">0</span></h3>
+
+</div>
+
+
+<!-- WISHLIST -->
+<div class="wishlist" id="wishlist">
+
+<div class="panel-header">
+<h2>Wishlist</h2>
+<button onclick="toggleWishlist()" class="close-btn">✖</button>
+</div>
+
+<div id="wishlist-items"></div>
+
+<h3>Total ₹<span id="wishlist-total">0</span></h3>
+
+</div>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>

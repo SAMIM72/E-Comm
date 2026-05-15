@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Checkout | ShopEase</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="checkout-container">
+
+<h1 class="checkout-title">Secure Checkout</h1>
+
+<div class="checkout-card fade-in">
+
+<h2>Order Summary</h2>
+
+<div id="checkout-items"></div>
+
+<div class="checkout-total">
+Total: ₹<span id="checkout-total">0</span>
+</div>
+
+</div>
+
+
+<div class="checkout-card fade-in delay">
+
+<h2>Payment Method</h2>
+
+<select id="payment-method" class="payment-select">
+<option>UPI</option>
+<option>Credit Card</option>
+<option>Debit Card</option>
+<option>Cash on Delivery</option>
+</select>
+
+<button onclick="payNow()" class="pay-btn">
+
+<span id="pay-text">Pay Securely</span>
+
+<span id="loader" class="loader hidden"></span>
+
+</button>
+
+</div>
+
+
+<div id="success-box" class="success-box hidden">
+
+<div class="success-icon">✔</div>
+
+<h2>Payment Successful!</h2>
+
+<p>Your order has been placed.</p>
+
+<button onclick="goHome()">Continue Shopping</button>
+
+</div>
+
+</div>
+
+<script src="checkout.js"></script>
+
+</body>
+</html>
